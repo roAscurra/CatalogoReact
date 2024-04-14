@@ -12,7 +12,7 @@ type InstrumentoParam = {
 }
 function ItemInstrumento(args: InstrumentoParam) {
     const costoEnvioText = args.costoEnvio === "G" ? <><img src="../public/img/camion.png" alt="Camión" /> Envío gratis a todo el país</> : `Costo de Envío Interior de Argentina $${args.costoEnvio}`;
-    const classEnvio = args.costoEnvio === "G" ? "#00a650" : "#ff8a50";
+    const classEnvio = args.costoEnvio === "G" ? "text-green" : "text-orange";
 
     return (
         <div className="card mb-3">
@@ -22,9 +22,9 @@ function ItemInstrumento(args: InstrumentoParam) {
                 </div>
                 <div className="col-md-10">
                     <div className="card-body">
-                        <p className="card-title" style={{fontSize: 'x-large'}}>{args.instrumento}</p>
+                        <p className="card-title">{args.instrumento}</p>
                         <p className="card-text h1">$ {args.precio}</p>
-                        <p className="card-text" style={{ color: classEnvio }}>{costoEnvioText}</p>
+                        <p className={`card-text ${classEnvio}`}>{costoEnvioText}</p>
                         <p className='card-text'>{args.cantidadVendida} vendidos</p>
                     </div>
                 </div>

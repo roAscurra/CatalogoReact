@@ -1,6 +1,6 @@
 function Card({ instrumento= "", imagen = "", precio = 0,costoEnvio= "G", cantidadVendida= 0}){
     const costoEnvioText = costoEnvio === "G" ? "Envío gratis a todo el país" : `Costo de Envío Interior de Argentina $${costoEnvio}`;
-    const classEnvio = costoEnvio === "G" ? "text-success" : "text-orange";
+    const classEnvio = costoEnvio === "G" ? "text-green" : "text-orange";
 
     <div className="card mb-3">
         <div className="row">
